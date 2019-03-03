@@ -13,3 +13,28 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/survey')
+def index():
+    return "This is the survey page"
+
+
+@app.route('/user')
+def index():
+    return "This is the user info page"
+
+
+@app.route('/friends')
+def index():
+    return "This is your friends page"
+
+
+@app.route('/rewards')
+def index():
+    return "This is the rewards page"
+
+
+@app.route('/settings')
+def index():
+    return "This is the settings page"
