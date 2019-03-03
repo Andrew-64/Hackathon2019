@@ -10,12 +10,17 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index(name = "User", waste = 0):
-    return render_template('index.html', name=name, waste=waste)
+    # return render_template('index.html', name=name, waste=waste)
+    if request.method == "POST":
+        name = request.form['username']
+        return render_template('index.html', name=name, waste=waste)
+    else:
+        return render_template('account.html')
 
 
-@app.route('/survey', methods=["GET","POST"])
+@app.route('/survey', methods=["GET", "POST"])
 def survey():
     if request.method == "POST":
         recycled = request.form['amountRang']
@@ -26,8 +31,14 @@ def survey():
 
 @app.route('/user')
 def user():
-    return "This is the user info page"
-    # return render_template('user.html')
+    # return "This is the user info page"
+    return render_template('myData.html')
+
+
+@app.route('/login')
+def login():
+    # return "This is the login page"
+    return render_template('account.html')
 
 
 @app.route('/friends')

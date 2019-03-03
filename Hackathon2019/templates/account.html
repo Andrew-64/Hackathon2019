@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Login and Registration Form Design</title>
-        <link rel="stylesheet" href="account.css" type="text/css">
+        <link rel="stylesheet" href="/static/account.css" type="text/css">
     </head>
     <body>
         <div class="login-page">
@@ -15,10 +15,10 @@
                 <button>Create</button> 
                 <p class="message">Already Registered? <a href="#">Login </a></p>
             </form>
-            <form class="login-form">
-                <input type="text" placeholder="user name"/>
+            <form class="login-form" method="post">
+                <input type="text" placeholder="user name" name="username"/>
                 <input type="password" placeholder="password"/>
-                <button>login</button>
+                <button type="submit">login</button>
                 <p class="message">Not Registered? <a href="#">Register</a></p>
             </form>
         </div>
