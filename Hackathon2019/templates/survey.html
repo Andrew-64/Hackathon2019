@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <h1>Enter your Daily Input</h1>
+    <body>
+        <form>
+            <h3>How many plastic bottles did you throw away today? (Ex: Aquafina, Sprite, etc.)</h3>
+            <section class="plastic bottles">
+                    <span>0</span>
+                    <input type="range" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" />
+                    <output type="number" name="amountInput" min="0" max="10+" value="0" oninput="this.form.amountRange.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many plastic bottles did you recycle today? (Ex: Aquafina, Sprite, etc.)</h3>
+            <section class="plastic recycling">
+                    <span>0</span>
+                    <input type="range" name="amountRang" min="0" max="10" value="0" oninput="this.form.amountInpu.value=this.value" />
+                    <output type="number" name="amountInpu" min="0" max="10+" value="0" oninput="this.form.amountRang.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many styrofoam items did you use today? (Ex: To-Go Box, Cup)</h3>
+            <section class="styrofoam">
+                    <span>0</span>
+                    <input type="range" name="amountRan" min="0" max="10" value="0" oninput="this.form.amountInp.value=this.value" />
+                    <output type="number" name="amountInp" min="0" max="10+" value="0" oninput="this.form.amountRan.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many plastic straws did you use today?</h3>
+            <section class="straws">
+                    <span>0</span>
+                    <input type="range" name="amountRa" min="0" max="10" value="0" oninput="this.form.amountIn.value=this.value" />
+                    <output type="number" name="amountIn" min="0" max="10+" value="0" oninput="this.form.amountRa.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>Approximately how many pieces of paper did you throw away today?</h3>
+            <section class="paper">
+                    <span>0</span>
+                    <input type="range" name="amountR" min="0" max="30" value="0" oninput="this.form.amountI.value=this.value" />
+                    <output type="number" name="amountI" min="0" max="30+" value="0" oninput="this.form.amountR.value=this.value" >
+                    <span>30+</span>
+            </section>
+            <h3>Roughly how many pieces of paper did you recycle today?</h3>
+            <section class="paper recycling">
+                    <span>0</span>
+                    <input type="range" name="mountRange" min="0" max="30" value="0" oninput="this.form.mountInput.value=this.value" />
+                    <output type="number" name="mountInput" min="0" max="30+" value="0" oninput="this.form.mountRange.value=this.value" >
+                    <span>30+</span>
+            </section>
+            <h3>How many glass bottles did you throw away today?</h3>
+            <section class="glass bottles trash">
+                    <span>0</span>
+                    <input type="range" name="ountRange" min="0" max="10" value="0" oninput="this.form.ountInput.value=this.value" />
+                    <output type="number" name="ountInput" min="0" max="10+" value="0" oninput="this.form.ountRange.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many glass bottles did you recycle today?</h3>
+            <section class="glass bottles recycle">
+                    <span>0</span>
+                    <input type="range" name="untRange" min="0" max="10" value="0" oninput="this.form.untInput.value=this.value" />
+                    <output type="number" name="untInput" min="0" max="10+" value="0" oninput="this.form.untRange.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many cans did you throw away today? (Ex. Soda Can, Beer, Canned Food)</h3>
+            <section class="cans">
+                    <span>0</span>
+                    <input type="range" name="ntRange" min="0" max="10" value="0" oninput="this.form.ntInput.value=this.value" />
+                    <output type="number" name="ntInput" min="0" max="10+" value="0" oninput="this.form.ntRange.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many cans did you recycle today? (Ex. Soda Can, Beer, Canned Food)</h3>
+            <section class="cans">
+                    <span>0</span>
+                    <input type="range" name="tRange" min="0" max="10" value="0" oninput="this.form.tInput.value=this.value" />
+                    <output type="number" name="tInput" min="0" max="10+" value="0" oninput="this.form.tRange.value=this.value" >
+                    <span>10+</span>
+            </section>
+            <h3>How many Cardboard boxes did you throw away today?</h3>
+            <section class="cardboard trash">
+                    <label for="small">Small boxes (Ex: Box of Girl Scout Cookies)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <section class="cardboard trash">
+                    <label for="medium">Small boxes (Ex: Box for a Coffee Maker)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <section class="cardboard trash">
+                    <label for="large">Large boxes (Ex: TV Box)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <h3>How many Cardboard boxes did you recycle today?</h3>
+            <section class="cardboard recycle">
+                    <label for="small">Small boxes (Ex: Box of Girl Scout Cookies)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <section class="cardboard recycle">
+                    <label for="medium">Small boxes (Ex: Box for a Coffee Maker)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <section class="cardboard recycle">
+                    <label for="large">Large boxes (Ex: TV Box)</label>
+                    <input type="number" step="1" min="0">
+            </section>
+            <section>
+            <input type="submit" value="Submit">
+        </section>
+        </form>
+    </body>
+</html>
