@@ -16,25 +16,25 @@ def index():
 
 
 @app.route('/survey')
-def index():
+def survey():
     return "This is the survey page"
 
 
 @app.route('/user')
-def index():
+def user():
     return "This is the user info page"
 
 
 @app.route('/friends')
-def index():
+def friends():
     return "This is your friends page"
 
 
 @app.route('/rewards')
-def index():
+def rewards():
     return "This is the rewards page"
 
 
 @app.route('/settings')
-def index():
+def settings():
     return "This is the settings page"
