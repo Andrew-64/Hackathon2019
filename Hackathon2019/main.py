@@ -4,7 +4,7 @@
 # >flask run
 # Then paste the URL to a web browser
 
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
 
 app = Flask(__name__)
@@ -15,10 +15,13 @@ def index(name = "User", waste = 0):
     return render_template('index.html', name=name, waste=waste)
 
 
-@app.route('/survey')
+@app.route('/survey', methods=["GET","POST"])
 def survey():
-    # return "This is the survey page"
-    return render_template('survey.html')
+    if request.method == "POST":
+        recycled = request.form['amountRang']
+        return render_template('index.html', name="User", waste=recycled)
+    else:
+        return render_template('survey.html')
 
 
 @app.route('/user')
