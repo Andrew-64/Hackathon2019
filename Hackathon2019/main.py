@@ -17,8 +17,8 @@ def index(name = "User", waste = 0):
 
 @app.route('/survey')
 def survey():
-    return "This is the survey page"
-    # return render_template('survey.html')
+    # return "This is the survey page"
+    return render_template('survey.html')
 
 
 @app.route('/user')
