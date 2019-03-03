@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def index(name = "User", waste = 0):
+    return render_template('index.html', name=name, waste=waste)
 
 
 @app.route('/survey')
