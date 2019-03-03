@@ -18,23 +18,28 @@ def index(name = "User", waste = 0):
 @app.route('/survey')
 def survey():
     return "This is the survey page"
+    # return render_template('survey.html')
 
 
 @app.route('/user')
 def user():
     return "This is the user info page"
+    # return render_template('user.html')
 
 
 @app.route('/friends')
 def friends():
     return "This is your friends page"
+    # return render_template('friends.html')
 
 
 @app.route('/rewards')
 def rewards():
     return "This is the rewards page"
+    # return render_template('rewards.html')
 
 
 @app.route('/settings')
 def settings():
     return "This is the settings page"
+    # return render_template('settings.html')
