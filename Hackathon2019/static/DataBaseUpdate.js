@@ -23,6 +23,27 @@ var user_email = "james@gmail.com";
 var username  = "James";
 var pass = "yes";
 
+/*
+
+const {Pool, Client}  = require('pg');
+
+ const pool = new Pool({
+   user: 'postgres',
+   host: 'localhost',
+   database: 'postgres',
+   password: 'Pedromary12',
+   port: 5432,
+ })
+
+ const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'postgres',
+  password: 'Pedromary12',
+  port: 5432,
+});
+*/
+
 
 
 client.connect();
@@ -37,19 +58,35 @@ client.query('INSERT INTO sustain.forms (ftime, user_name, fgbot_rec, fgbot_tras
 
 client.query('INSERT INTO sustain.users (user_email, user_name, pass_word, gbot_rec, gbot_trash, can_rec, can_trash, pbot_rec, pbot_trash, '+
 'styro, straw, card_rec, card_trash, pap_rec, pap_trash) values'+
-'('+user_email +',' + username +',' + pass +','+','+gbot_rec+','+gbot_trash+','+can_rec+','+can_trash+','+pbot_rec+','+pbot_trash+','+styro
+'('+user_email +',' + username +',' + pass +','+gbot_rec+','+gbot_trash+','+can_rec+','+can_trash+','+pbot_rec+','+pbot_trash+','+styro
 +','+straw+','+card_rec+','+card_trash+','+pap_rec+','+pap_trash+');', (err, res) => {
   console.log(err, res)
 
 });
 
-
+/*
 
 const query = {
-    text: 'SELECT * FROM sustain.users WHERE user_name = ' + username +';';
+    text: 'SELECT * FROM sustain.users WHERE user_name =' + '\"'+username + '\"' +';',
     
     rowMode: 'array',
   };
+
+
+  console.log('INSERT INTO sustain.forms (ftime, user_name, fgbot_rec, fgbot_trash, fcan_rec, fcan_trash, fpbot_rec, fpbot_trash, '+
+  'fstyro, fstraw, fcard_rec, fcard_trash, fpap_rec, fpap_trash) values'+
+  '('+ftime+','+username+','+gbot_rec+','+gbot_trash+','+can_rec+','+can_trash+','+pbot_rec+','+pbot_trash+','+styro
+  +','+straw+','+card_rec+','+card_trash+','+pap_rec+','+pap_trash+');')
+
+
+  console.log('INSERT INTO sustain.users (user_email, user_name, pass_word, gbot_rec, gbot_trash, can_rec, can_trash, pbot_rec, pbot_trash, '+
+  'styro, straw, card_rec, card_trash, pap_rec, pap_trash) values'+
+  '('+user_email +',' + username +',' + pass +','+','+gbot_rec+','+gbot_trash+','+can_rec+','+can_trash+','+pbot_rec+','+pbot_trash+','+styro
+  +','+straw+','+card_rec+','+card_trash+','+pap_rec+','+pap_trash+');')
+
+  console.log('SELECT * FROM sustain.users WHERE user_name = ' + '\"'+username + '\"' +';')
+  
+
 client.query(query,  (err, res) => {
     //console.log(err ? err.stack : res.fields.map(f=>field.name)) // Hello World!
     //console.log(res.fields[0]);
@@ -84,6 +121,9 @@ client.query(query,  (err, res) => {
     totcardtrash = totcardtrash + card_trash;
     totpaprec = totpaprec + pap_rec;
     totpaptrash = totpaptrash + pap_trash;
+
+    console.log('UPDATE sustain.user SET gbot_rec = ' + totgbotrec +' where user_name = ' + username +';');
+
     
     client.query('UPDATE sustain.user SET gbot_rec = ' +totgbotrec +' where user_name = ' + username +';', (err, res) => {
         console.log(err, res)
@@ -116,12 +156,15 @@ client.query(query,  (err, res) => {
         console.log(err, res)
     });
 
-
+*/
 
 
 
     
+   
+
+
     client.end()
-  });
+ // });
 
 
