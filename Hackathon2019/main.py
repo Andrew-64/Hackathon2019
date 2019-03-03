@@ -24,7 +24,8 @@ def index(name = "User", waste = 0):
 def survey():
     if request.method == "POST":
         recycled = request.form['amountRang']
-        return render_template('index.html', name="User", waste=recycled)
+        name = request.args['name']
+        return render_template('index.html', name=name, waste=recycled)
     else:
         return render_template('survey.html')
 
